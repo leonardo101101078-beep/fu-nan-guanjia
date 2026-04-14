@@ -1,0 +1,77 @@
+.app-container {
+  max-width: 430px;
+  margin: 0 auto;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-bg);
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s ease;
+}
+
+/* Orange glow orb — top right */
+.app-container::before {
+  content: '';
+  position: fixed;
+  top: -100px;
+  right: -100px;
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  background: radial-gradient(circle,
+    rgba(255, 107, 53, 0.30) 0%,
+    rgba(255, 107, 53, 0.10) 40%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 0;
+  transition: background 0.3s ease;
+}
+
+/* Secondary soft orb — bottom left */
+.app-container::after {
+  content: '';
+  position: fixed;
+  bottom: 60px;
+  left: -60px;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(circle,
+    rgba(255, 107, 53, 0.12) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 0;
+  transition: background 0.3s ease;
+}
+
+/* Dark mode orbs — teal + purple */
+[data-theme="dark"] .app-container::before {
+  background: radial-gradient(circle,
+    rgba(0, 201, 167, 0.22) 0%,
+    rgba(123, 97, 255, 0.08) 50%,
+    transparent 70%
+  );
+}
+
+[data-theme="dark"] .app-container::after {
+  background: radial-gradient(circle,
+    rgba(123, 97, 255, 0.18) 0%,
+    transparent 70%
+  );
+}
+
+.page-content {
+  flex: 1;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+  z-index: 1;
+}
+
+/* Page enter animation wrapper */
+.page-content > * {
+  animation: pageIn 0.25s ease both;
+}

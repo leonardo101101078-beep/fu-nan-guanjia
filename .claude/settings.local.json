@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(rm -f src/assets/react.svg src/assets/vite.svg src/assets/hero.png)",
+      "Bash(node -e ':*)",
+      "Bash(npm run:*)",
+      "Bash(which convert:*)",
+      "Bash(which rsvg-convert:*)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(npx tsc:*)"
+    ]
+  }
+}

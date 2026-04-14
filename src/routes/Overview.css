@@ -1,0 +1,326 @@
+.overview-page {
+  padding-bottom: 80px;
+}
+
+/* ── Month Navigation ── */
+.month-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 16px;
+}
+
+.month-nav-arrow {
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: var(--glass-blur);
+  backdrop-filter: var(--glass-blur);
+  border-radius: 50%;
+  cursor: pointer;
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  box-shadow: var(--glass-shadow);
+}
+
+.month-nav-arrow:active {
+  background: rgba(255, 107, 53, 0.12);
+}
+
+.month-nav-arrow:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.month-nav-label {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-text);
+  letter-spacing: -0.02em;
+}
+
+/* ── Summary Row ── */
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px 16px;
+  gap: 12px;
+}
+
+.summary-item {
+  flex: 1;
+  cursor: pointer;
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: var(--glass-blur);
+  backdrop-filter: var(--glass-blur);
+  border: var(--glass-border);
+  border-radius: var(--radius-card);
+  padding: 14px 16px;
+  box-shadow: var(--glass-shadow);
+  transition: transform 0.15s;
+}
+
+.summary-item:active {
+  transform: scale(0.97);
+}
+
+.summary-label {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.summary-value {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.summary-value.expense { color: var(--color-expense); }
+.summary-value.income  { color: var(--color-income); }
+
+/* ── Budget Section ── */
+.budget-section {
+  display: flex;
+  justify-content: center;
+  padding: 8px 0 28px;
+}
+
+.budget-circle {
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  background: conic-gradient(
+    var(--color-primary) 0% var(--fill, 0%),
+    var(--color-border-subtle) var(--fill, 0%) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 32px rgba(255, 107, 53, 0.20);
+}
+
+.budget-circle-inner {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  background: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  padding: 12px;
+}
+
+.budget-label {
+  font-size: 11px;
+  color: var(--color-text-secondary);
+  margin-bottom: 2px;
+}
+
+.budget-remaining {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-primary);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+.budget-row {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.budget-sub-label {
+  font-size: 10px;
+  color: var(--color-text-secondary);
+}
+
+.budget-sub-val {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.budget-sub-val.fixed {
+  color: var(--color-expense);
+}
+
+.budget-set-btn {
+  margin-top: 4px;
+  padding: 3px 10px;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: 50px;
+  background: transparent;
+  font-size: 10px;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.budget-set-btn:active {
+  background: rgba(255,107,53,0.08);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+/* ── Detail Section ── */
+.detail-section {
+  padding: 0 16px 16px;
+}
+
+.category-breakdown {
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: var(--glass-blur);
+  backdrop-filter: var(--glass-blur);
+  border: var(--glass-border);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  box-shadow: var(--glass-shadow);
+  margin-top: 8px;
+}
+
+.breakdown-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+}
+
+.breakdown-row + .breakdown-row {
+  border-top: 1px solid var(--color-border-subtle);
+}
+
+.breakdown-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.breakdown-icon.expense {
+  background: rgba(255, 107, 53, 0.10);
+  color: var(--color-expense);
+}
+
+.breakdown-icon.income {
+  background: rgba(74, 144, 217, 0.10);
+  color: var(--color-income);
+}
+
+.breakdown-name {
+  flex: 1;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.breakdown-percent {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  width: 48px;
+  text-align: right;
+}
+
+.breakdown-amount {
+  font-size: 14px;
+  font-weight: 600;
+  width: 80px;
+  text-align: right;
+  color: var(--color-text);
+}
+
+/* ── Modal ── */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 300;
+  animation: fadeIn 0.15s ease;
+}
+
+.modal-content {
+  background: var(--color-surface-solid);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border: var(--glass-border);
+  border-radius: 24px;
+  padding: 28px 24px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  animation: slideUp 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.modal-content h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+}
+
+.modal-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid var(--color-border-subtle);
+  border-radius: 14px;
+  font-size: 16px;
+  text-align: center;
+  outline: none;
+  background: var(--glass-bg);
+  color: var(--color-text);
+  transition: border-color 0.2s;
+  margin-bottom: 8px;
+}
+
+.modal-input:focus {
+  border-color: var(--color-primary);
+}
+
+.modal-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.modal-btn {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 14px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.modal-btn:active { opacity: 0.8; }
+
+.modal-btn.cancel {
+  background: var(--color-border-subtle);
+  color: var(--color-text-secondary);
+}
+
+.modal-btn.confirm {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.30);
+}

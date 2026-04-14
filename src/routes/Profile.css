@@ -1,0 +1,427 @@
+.profile-page {
+  padding: 16px 16px 100px;
+}
+
+/* ── Header ── */
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.profile-title {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--color-text);
+}
+
+.theme-toggle-btn {
+  border: 1px solid var(--color-border-subtle);
+  background: var(--glass-bg);
+  color: var(--color-text-secondary);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.2s;
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+}
+
+.theme-toggle-btn:active {
+  background: rgba(255, 107, 53, 0.10);
+  color: var(--color-primary);
+}
+
+/* ── Cards ── */
+.profile-card {
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: var(--glass-blur);
+  backdrop-filter: var(--glass-blur);
+  border: var(--glass-border);
+  border-radius: var(--radius-card);
+  padding: 18px 16px;
+  margin-bottom: 12px;
+  box-shadow: var(--glass-shadow);
+}
+
+.profile-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  margin-bottom: 10px;
+}
+
+.profile-edit-btn,
+.profile-add-btn {
+  border: none;
+  background: rgba(255, 107, 53, 0.10);
+  color: var(--color-primary);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 4px 10px;
+  border-radius: 50px;
+  transition: background 0.15s;
+}
+
+.profile-edit-btn:active,
+.profile-add-btn:active {
+  background: rgba(255, 107, 53, 0.20);
+}
+
+/* ── Balance ── */
+.profile-balance {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  letter-spacing: -0.04em;
+}
+
+.profile-balance.positive { color: var(--color-income); }
+.profile-balance.negative { color: var(--color-expense); }
+
+.profile-balance-detail {
+  display: flex;
+  gap: 16px;
+  font-size: 13px;
+}
+
+.detail-income  { color: var(--color-income);  font-weight: 500; }
+.detail-expense { color: var(--color-expense); font-weight: 500; }
+
+/* ── Budget ── */
+.profile-budget-value {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 10px;
+  letter-spacing: -0.03em;
+}
+
+.profile-budget-bar {
+  height: 6px;
+  background: var(--color-border-subtle);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+
+.profile-budget-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+  border-radius: 3px;
+  transition: width 0.4s ease;
+}
+
+.profile-budget-label {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+
+/* ── Fixed Expenses ── */
+.fixed-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.fixed-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  background: var(--color-border-subtle);
+  border-radius: 12px;
+}
+
+.fixed-name {
+  flex: 1;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.fixed-amount {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-expense);
+}
+
+.fixed-delete {
+  border: none;
+  background: transparent;
+  color: var(--color-text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: color 0.15s;
+}
+
+.fixed-delete:active {
+  color: var(--color-danger);
+}
+
+.fixed-total {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-expense);
+  text-align: right;
+  padding-top: 4px;
+  border-top: 1px solid var(--color-border-subtle);
+}
+
+/* ── Goals ── */
+.profile-empty {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  text-align: center;
+  padding: 12px;
+}
+
+.goals-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.goal-item {
+  padding: 12px;
+  background: var(--color-border-subtle);
+  border-radius: 14px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.goal-item:active {
+  background: rgba(255, 107, 53, 0.08);
+}
+
+.goal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.goal-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.goal-delete {
+  border: none;
+  background: rgba(231, 76, 60, 0.08);
+  color: #C0392B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.goal-delete:active {
+  background: rgba(231, 76, 60, 0.16);
+}
+
+.goal-bar {
+  height: 5px;
+  background: rgba(0, 0, 0, 0.08);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+
+.goal-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-income), #3A7BC8);
+  border-radius: 3px;
+  transition: width 0.5s ease;
+}
+
+.goal-fill.overdue {
+  background: linear-gradient(90deg, var(--color-expense), #CC2A2A);
+}
+
+.goal-values {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+}
+
+.goal-amount {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.goal-date {
+  color: var(--color-text-secondary);
+  font-size: 12px;
+}
+
+/* ── Export Card ── */
+.export-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.export-range {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.export-range-label {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  font-weight: 600;
+}
+
+.export-month-input {
+  flex: 1;
+  min-width: 120px;
+  padding: 8px 12px;
+  border: 1.5px solid var(--color-border-subtle);
+  border-radius: 10px;
+  font-size: 14px;
+  background: var(--glass-bg);
+  color: var(--color-text);
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.export-month-input:focus {
+  border-color: var(--color-primary);
+}
+
+.profile-export-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s;
+  box-shadow: 0 6px 20px rgba(255, 107, 53, 0.28);
+  letter-spacing: 0.02em;
+}
+
+.profile-export-btn:active {
+  opacity: 0.85;
+}
+
+/* ── Modal ── */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 300;
+  animation: fadeIn 0.15s ease;
+}
+
+.modal-content {
+  background: var(--color-surface-solid);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border: var(--glass-border);
+  border-radius: 24px;
+  padding: 28px 24px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  animation: slideUp 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.modal-content h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+}
+
+.modal-label {
+  display: block;
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  text-align: left;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.modal-input {
+  display: block;
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid var(--color-border-subtle);
+  border-radius: 14px;
+  font-size: 16px;
+  outline: none;
+  margin-bottom: 10px;
+  background: var(--glass-bg);
+  color: var(--color-text);
+  transition: border-color 0.2s;
+}
+
+.modal-input:focus {
+  border-color: var(--color-primary);
+}
+
+.modal-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.modal-btn {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 14px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.modal-btn:active { opacity: 0.8; }
+
+.modal-btn.cancel {
+  background: var(--color-border-subtle);
+  color: var(--color-text-secondary);
+}
+
+.modal-btn.confirm {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.30);
+}

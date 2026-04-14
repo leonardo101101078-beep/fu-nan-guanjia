@@ -1,0 +1,57 @@
+.date-navigator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: var(--glass-blur);
+  backdrop-filter: var(--glass-blur);
+  border: var(--glass-border);
+  border-radius: 50px;
+  padding: 4px;
+  margin: 0 16px;
+  box-shadow: var(--glass-shadow);
+}
+
+.date-nav-arrow {
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+
+.date-nav-arrow:active {
+  background: rgba(255, 107, 53, 0.10);
+}
+
+.date-nav-arrow:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.date-nav-center {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text);
+  padding: 6px 0;
+}
+
+.date-nav-icon {
+  color: var(--color-primary);
+  opacity: 0.8;
+}

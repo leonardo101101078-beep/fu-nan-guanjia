@@ -1,0 +1,93 @@
+.keypad-wrapper {
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: var(--glass-blur);
+  backdrop-filter: var(--glass-blur);
+  border-top: var(--glass-border);
+  border-radius: 24px 24px 0 0;
+  padding: 12px 12px calc(12px + env(safe-area-inset-bottom));
+  box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.06);
+}
+
+.keypad-display {
+  text-align: right;
+  padding: 4px 12px 10px;
+}
+
+.keypad-pending {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  min-height: 18px;
+}
+
+.keypad-amount {
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--color-text);
+  letter-spacing: -0.5px;
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 54px);
+  gap: 8px;
+}
+
+.key {
+  border: none;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.12s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.key:active {
+  transform: scale(0.92);
+}
+
+.key-digit {
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--color-text);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.key-operator {
+  background: rgba(255, 107, 53, 0.12);
+  color: var(--color-primary);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.key-ac {
+  background: rgba(231, 76, 60, 0.10);
+  color: #C0392B;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.key-back {
+  background: rgba(0, 0, 0, 0.06);
+  color: var(--color-text-secondary);
+  font-size: 20px;
+}
+
+.key-ok {
+  background: linear-gradient(145deg, #FF6B35, #E85D2F);
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+  grid-row: span 2;
+  border-radius: 28px;
+  box-shadow: 0 4px 16px rgba(255, 107, 53, 0.35);
+  letter-spacing: 0.05em;
+}
+
+.key-ok:active {
+  background: linear-gradient(145deg, #E85D2F, #D04E22);
+  box-shadow: 0 2px 8px rgba(255, 107, 53, 0.25);
+}

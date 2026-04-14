@@ -1,0 +1,100 @@
+:root {
+  /* ── Orange / Cream palette ── */
+  --color-primary:        #FF6B35;
+  --color-accent:         #E85D2F;
+  --color-bg:             #FAF8F4;
+  --color-surface:        rgba(255, 255, 255, 0.70);
+  --color-surface-solid:  #FFFFFF;
+  --color-border:         rgba(255, 255, 255, 0.80);
+  --color-border-subtle:  rgba(0, 0, 0, 0.06);
+  --color-text:           #1A1A1A;
+  --color-text-secondary: #888888;
+  --color-expense:        #FF6B35;
+  --color-income:         #4A90D9;   /* 綠 → 藍 */
+  --color-danger:         #E74C3C;
+
+  /* ── Glass / blur ── */
+  --glass-blur:    blur(20px);
+  --glass-bg:      rgba(255, 255, 255, 0.68);
+  --glass-border:  1px solid rgba(255, 255, 255, 0.80);
+  --glass-shadow:  0 8px 32px rgba(0, 0, 0, 0.08);
+
+  /* ── Radii & shadows ── */
+  --radius-card: 20px;
+  --radius-btn:  50px;
+  --shadow-card: 0 2px 16px rgba(0, 0, 0, 0.06);
+
+  --font-main: -apple-system, BlinkMacSystemFont, 'PingFang TC',
+               'Noto Sans TC', 'Segoe UI', sans-serif;
+}
+
+/* ── Dark Mode ── */
+[data-theme="dark"] {
+  --color-primary:        #FF6B35;               /* 保持橙色品牌識別 */
+  --color-accent:         #E8572A;
+  --color-bg:             #070A12;               /* 極深海軍藍 */
+  --color-surface:        rgba(255, 255, 255, 0.04);
+  --color-surface-solid:  #0F1628;
+  --color-border:         rgba(255, 255, 255, 0.09);
+  --color-border-subtle:  rgba(255, 255, 255, 0.06);
+  --color-text:           #FFFFFF;
+  --color-text-secondary: #8BA3C4;
+  --color-expense:        #FF5A5A;
+  --color-income:         #00C9A7;               /* teal */
+  --color-danger:         #FF4444;
+  --glass-bg:             rgba(255, 255, 255, 0.04);
+  --glass-border:         1px solid rgba(255, 255, 255, 0.08);
+  --glass-shadow:         0 8px 40px rgba(0, 0, 0, 0.60);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { height: 100%; }
+
+body {
+  font-family: var(--font-main);
+  background: var(--color-bg);
+  color: var(--color-text);
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior: none;
+  min-height: 100%;
+  margin: 0;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+#root { min-height: 100dvh; }
+
+input, button, textarea { font-family: inherit; }
+button { -webkit-tap-highlight-color: transparent; }
+
+/* ── Global Button Transitions ── */
+button {
+  transition: transform 0.12s ease, opacity 0.12s ease;
+}
+button:active:not(:disabled) {
+  transform: scale(0.94);
+  opacity: 0.85;
+}
+
+/* ── Page Enter Animation ── */
+@keyframes pageIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Modal Animations ── */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
