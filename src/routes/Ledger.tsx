@@ -125,6 +125,11 @@ export default function Ledger() {
           placeholder="輸入備註"
           value={note}
           onChange={e => setNote(e.target.value)}
+          onFocus={e => {
+            setTimeout(() => {
+              e.target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 300);
+          }}
         />
         <button
           className="entry-add-btn"

@@ -35,6 +35,7 @@ export default function App() {
         )}
       </main>
       <BottomNav activeTab={activeTab} onChange={setActiveTab} />
+      <img src="/favicon.svg" className="coin-watermark" alt="" aria-hidden="true" />
     </div>
   );
 }

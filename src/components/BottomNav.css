@@ -3,7 +3,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  height: 64px;
+  height: calc(64px + env(safe-area-inset-bottom));
   background: var(--glass-bg);
   -webkit-backdrop-filter: var(--glass-blur);
   backdrop-filter: var(--glass-blur);
