@@ -63,18 +63,6 @@
   );
 }
 
-.coin-watermark {
-  position: absolute;
-  bottom: 0;
-  right: -40px;
-  width: 260px;
-  height: 260px;
-  opacity: 0.15;
-  z-index: 0;
-  pointer-events: none;
-  user-select: none;
-}
-
 .page-content {
   flex: 1;
   overflow-y: auto;
